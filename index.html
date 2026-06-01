@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Summer Creative Writing Meet-Ups for Kids — with Vivien Drabkin</title>
+<meta name="description" content="Personalized, in-person summer creative writing meet-ups for kids. Led by a published writer, classroom teacher, and learning specialist with 15+ years of experience and an MFA from Columbia University." />
+<style>
+  :root {
+    --ink: #2b2a33;
+    --ink-soft: #4a4856;
+    --cream: #fbf6ee;
+    --cream-dark: #f3ead9;
+    --accent: #c46a4a;
+    --accent-dark: #a8542f;
+    --leaf: #5e7a55;
+    --rule: #e3d9c4;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Georgia", "Iowan Old Style", "Palatino", serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* Hero */
+  header.hero {
+    background:
+      radial-gradient(ellipse at top right, #fff3df 0%, transparent 60%),
+      radial-gradient(ellipse at bottom left, #ffe7d5 0%, transparent 55%),
+      var(--cream);
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .eyebrow {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--accent-dark);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4.5vw, 3.1rem);
+    line-height: 1.15;
+    margin: 0 0 22px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent-dark);
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0 0 36px;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+
+  .btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+  .btn.secondary {
+    background: transparent;
+    color: var(--accent-dark);
+    border: 1.5px solid var(--accent);
+    padding: 12.5px 24px;
+  }
+
+  .btn.secondary:hover { background: rgba(196, 106, 74, 0.08); }
+
+  /* Sections */
+  section { padding: 72px 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 400;
+    margin: 0 0 22px;
+    letter-spacing: -0.005em;
+  }
+
+  h2 .accent {
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    color: var(--leaf);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p { margin: 0 0 1.1em; font-size: 1.08rem; }
+
+  /* Why card */
+  .why {
+    background: var(--cream-dark);
+    border-radius: 18px;
+    padding: 36px 36px;
+    margin-top: 8px;
+  }
+
+  .why p { margin: 0; font-style: italic; color: var(--ink-soft); }
+
+  /* Session list */
+  .session-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 18px;
+  }
+
+  .session-list li {
+    padding: 18px 22px 18px 56px;
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    position: relative;
+    font-size: 1.05rem;
+  }
+
+  .session-list li::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 26px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.9;
+  }
+
+  .format-note {
+    margin-top: 24px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  /* Bio */
+  .bio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .bio-card {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 32px;
+  }
+
+  .credentials {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: grid;
+    gap: 10px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+  }
+
+  .credentials li {
+    padding-left: 22px;
+    position: relative;
+  }
+
+  .credentials li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* Contact */
+  .contact {
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+    padding: 80px 0;
+    border-bottom: none;
+  }
+
+  .contact h2 { color: #fff; }
+  .contact h2 .accent { color: #f3b89c; }
+
+  .contact p { color: #d8d3c7; max-width: 520px; margin: 0 auto 28px; }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .contact-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .contact-links a:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    background: var(--cream);
+  }
+
+  @media (max-width: 540px) {
+    header.hero { padding: 60px 0 48px; }
+    section { padding: 56px 0; }
+    .why, .bio-card { padding: 26px; }
+    .session-list li { padding-left: 48px; }
+    .session-list li::before { left: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Summer 2026 · In-Person</div>
+    <h1>Creative writing meet-ups for kids who love to write — <em>and kids who don't (yet).</em></h1>
+    <p class="lede">Fun, personalized sessions that help your child rediscover focus, imagination, and the confidence that comes from making something they're proud of.</p>
+    <div class="cta-row">
+      <a class="btn" href="#contact">Reserve a session</a>
+      <a class="btn secondary" href="#sessions">See how it works</a>
+    </div>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <h2><span class="accent">Why now</span>Creativity doesn't have to fade.</h2>
+    <p>Do you see your child's creative expression slowly dimming as they get older? You're not alone — and it doesn't have to stay that way.</p>
+    <div class="why">
+      <p>Studies show that children who use their minds creatively continue to develop focus, imagination, and confidence in the outside world too.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sessions">
+  <div class="wrap">
+    <h2><span class="accent">What a session looks like</span>Read. Talk. Write. Polish.</h2>
+    <p>Every meet-up is hands-on and tailored to your child. Together, we'll:</p>
+    <ul class="session-list">
+      <li>Read a short piece of writing together — a poem, flash fiction, or a short story.</li>
+      <li>Talk about it, with a close look at one craft choice the writer made.</li>
+      <li>Your child writes their own piece, then we discuss and edit it together.</li>
+      <li>End with a final, polished piece your child will be proud of.</li>
+    </ul>
+    <p class="format-note">Sessions are <strong>in person</strong> and run <strong>45 or 60 minutes</strong>.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2><span class="accent">Who I am</span>Hi, I'm Vivien.</h2>
+    <div class="bio">
+      <div class="bio-card">
+        <p>I'm a published writer of poems and fiction, a classroom teacher, and a learning specialist with over 15 years of experience helping kids find their voice on the page.</p>
+        <p>I'm also mom to a rising fifth-grade boy with lots of energy — so I know what it takes to keep young writers engaged, challenged, and having fun.</p>
+        <ul class="credentials">
+          <li>M.F.A. in Creative Writing, Columbia University (New York)</li>
+          <li>15+ years as a classroom teacher and learning specialist</li>
+          <li>Published poet and fiction writer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2><span class="accent">Let's get started</span>Reserve your child's spot.</h2>
+    <p>Spots this summer are limited so each child gets the attention they deserve. Reach out and we'll find a time that works.</p>
+    <div class="contact-links">
+      <a href="tel:+13035485502">📞 &nbsp;303.548.5502</a>
+      <a href="mailto:viviendrabkin1@gmail.com?subject=Summer%20Creative%20Writing%20Meet-Ups">✉ &nbsp;viviendrabkin1@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Vivien Drabkin · Summer creative writing meet-ups for kids
+</footer>
+
+</body>
+</html>
